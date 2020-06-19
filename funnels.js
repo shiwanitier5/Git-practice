@@ -5,8 +5,8 @@ var port = chrome.extension.connect({
   name: "Popup-Background"
 });
 
-// chrome.storage.sync.get(['settings'], function (res) {
-//   console.log("items",res.settings);
+chrome.storage.sync.get(['settings'], function (res) {
+  console.log("items",res.settings);
 //   if(res.settings!=undefined && res.settings!=null)
 //   {
 //       window.location.href='funnels.html';
