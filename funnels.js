@@ -5,16 +5,16 @@ var port = chrome.extension.connect({
   name: "Popup-Background"
 });
 
-// chrome.storage.sync.get(['settings'], function (res) {
-//   console.log("items",res.settings);
-//   if(res.settings!=undefined && res.settings!=null)
-//   {
-//       window.location.href='funnels.html';
-//   }
-//   else{
-//       window.location.href='dashboard.html';
-//   }
-// });
+chrome.storage.sync.get(['settings'], function (res) {
+  console.log("items",res.settings);
+  if(res.settings!=undefined && res.settings!=null)
+  {
+      window.location.href='funnels.html';
+  }
+  else{
+      window.location.href='dashboard.html';
+  }
+});
 
 $(document).ready(function () {
   let datas = [];
